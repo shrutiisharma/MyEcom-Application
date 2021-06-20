@@ -1,0 +1,3 @@
+rootProject.name = "MyEcom App"
+include ':user-app'
+include ':models'
