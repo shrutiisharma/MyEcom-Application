@@ -41,14 +41,18 @@
         <TextView
             android:id="@+id/title"
             style="@style/TextAppearance.MaterialComponents.Headline6"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginEnd="16dp"
-            android:maxLines="1"
             android:text="@string/kiwi"
             app:layout_constraintStart_toEndOf="@+id/image"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/barrierToIncBtn"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:focusable="true"/>
 
         <TextView
             android:id="@+id/subtitle"
@@ -126,6 +130,14 @@
             android:layout_height="wrap_content"
             app:constraint_referenced_ids="decBtn,qty"
             android:visibility="gone"/>
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrierToIncBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="left"
+            app:constraint_referenced_ids="incBtn"
+            app:layout_constraintEnd_toStartOf="@id/incBtn"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
