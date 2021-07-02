@@ -16,4 +16,4 @@ Here are the screenshots of the application:
 
 <img src="https://user-images.githubusercontent.com/72591283/122751385-514b5a00-d2ad-11eb-8f20-a6cee27b577a.png" title="" alt="2021-06-21 (11)" width="397">
 
-Download apk from [here]()
+Download apk from [here](https://github.com/priyal-gopawat/MyEcom-Application/releases/download/1.0/user-app-debug.apk)
