@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.chip.Chip
+        android:id="@+id/chip_variant"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="₹96 - 500g "
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vb_product_name" />
+
+    <ImageView
+        android:id="@+id/btn_inc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_add"
+        app:tint="@color/design_default_color_primary" />
+
+
+    <ImageView
+        android:id="@+id/btn_dec"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/current_qty"
+        app:layout_constraintEnd_toStartOf="@+id/current_qty"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/chip_variant"
+        app:layout_constraintTop_toTopOf="@+id/current_qty"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_decrement"
+        app:tint="@color/design_default_color_primary" />
+
+    <TextView
+        android:id="@+id/current_qty"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/btn_inc"
+        app:layout_constraintEnd_toStartOf="@+id/btn_inc"
+        app:layout_constraintTop_toTopOf="@+id/btn_inc" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/non_zero_qty_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="btn_dec,current_qty" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,8 @@
 package com.streamliners.module;
 
 public class Variant {
-    String name;
-    float price;
+     public String name;
+    public  float price;
 
     public Variant(String name, float price) {
         this.name = name;

@@ -2,9 +2,9 @@ package com.streamliners.module;
 
 public class CartItem {
 
-    String name;
-    float unitPrice, qty;
-    public int type;
+     public String name;
+     public float unitPrice, qty;
+     public int type;
 
     public CartItem(String name, float unitPrice, float qty, int type) {
         this.name = name;
@@ -13,7 +13,7 @@ public class CartItem {
         this.type = type;
     }
 
-    float cost(){
+   public float cost(){
         return unitPrice * qty;
     }
 
@@ -21,4 +21,5 @@ public class CartItem {
     public String toString() {
         return "\n" + name + String.format("     ( ₹ %.2f X %.2f = ₹ %.2f )", unitPrice, qty, cost());
     }
+
 }

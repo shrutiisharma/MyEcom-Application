@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class Cart {
 
     public HashMap<String, CartItem> cartItems = new HashMap<>();
-    float total, noOfItems;
+     public int total, noOfItems;
 
 
     //method overloading

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">MyEcom App</string>
-    <string name="total_rupees">₹ 932</string>
-    <string name="total_items">6 items</string>
+    <string name="total_rupees">₹ 0</string>
+    <string name="total_items">0 items</string>
     <string name="checkout">CHECKOUT</string>
     <string name="item_image">Item\'s Image</string>
     <string name="apple">Apple</string>
@@ -11,7 +11,7 @@
     <string name="edit_button">Edit Button</string>
     <string name="dropdown_button">DropDown Button</string>
     <string name="dropup_button">DropUp Button</string>
-    <string name="quantity">3</string>
+    <string name="quantity">0</string>
     <string name="kiwi">Kiwi</string>
     <string name="_2_variants">2 variants</string>
     <string name="variant_name">₹ 96 : 500 g</string>

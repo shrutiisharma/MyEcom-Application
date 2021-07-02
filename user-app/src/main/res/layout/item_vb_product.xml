@@ -39,7 +39,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/title"
+            android:id="@+id/product_name"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/subtitle"
+            android:id="@+id/product_subtitle"
             style="@style/TextAppearance.MaterialComponents.Subtitle1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -59,7 +59,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/_2_variants"
             app:layout_constraintStart_toEndOf="@+id/image"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            app:layout_constraintTop_toBottomOf="@id/product_name" />
 
         <ImageButton
             android:id="@+id/dropDownBtn"
@@ -68,8 +68,8 @@
             android:layout_marginStart="8dp"
             android:contentDescription="@string/dropdown_button"
             android:src="@drawable/ic_arrow_drop_down"
-            app:layout_constraintStart_toEndOf="@id/subtitle"
-            app:layout_constraintTop_toBottomOf="@id/title" />
+            app:layout_constraintStart_toEndOf="@id/product_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/product_name" />
 
         <ImageButton
             android:id="@+id/dropUpBtn"
@@ -78,8 +78,8 @@
             android:layout_marginStart="8dp"
             android:contentDescription="@string/dropup_button"
             android:src="@drawable/ic_arrow_drop_up"
-            app:layout_constraintStart_toEndOf="@id/subtitle"
-            app:layout_constraintTop_toBottomOf="@id/title"
+            app:layout_constraintStart_toEndOf="@id/product_subtitle"
+            app:layout_constraintTop_toBottomOf="@id/product_name"
             android:visibility="gone"/>
 
         <!--Quantity Group-->
@@ -129,16 +129,13 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <com.google.android.material.chip.ChipGroup
-        android:id="@+id/variantChips"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:singleSelection="true">
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/variantChips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
 
-        <include layout="@layout/chip_variant" />
-        <include layout="@layout/chip_variant" />
-
-    </com.google.android.material.chip.ChipGroup>
+        </com.google.android.material.chip.ChipGroup>
 
 
     </LinearLayout>

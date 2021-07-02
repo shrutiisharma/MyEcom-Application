@@ -15,13 +15,7 @@ public class ProductOperations {
 
 //  //to add products
     public void addProduct() {
-        String menu = """
-
-                Select Product Type:
-                0: Add Weight Based Product:
-                1: Add Variant Based Product:
-                2: Go Back
-                Enter your choice:\s""";
+        String menu = "Select Product Type: 0: Add Weight Based Product: 1: Add Variant Based Product: 2: Go Back Enter your choice:";
 
 
         int menuOption = 1;                     //given a value initially to start the loop
@@ -134,10 +128,7 @@ public class ProductOperations {
 
         while (menuOption != 0) {
             //displaying menu to select product to edit
-            System.out.print("""
-
-                    Choose the product number you want to edit:
-                    0: Go Back""");
+            System.out.print("Choose the product number you want to edit: 0: Go Back");
 
 
             //array of objects for the name of the available products
@@ -172,15 +163,7 @@ public class ProductOperations {
 
         System.out.println("You chose to edit the Weight Based Product.");
 
-        String menu = """
-
-                Select the field you want to edit:
-                0: Go Back
-                1: Edit name of the product.
-                2: Edit imageURL of the product.
-                3: Edit minimum quantity of the product.
-                4: Edit price per kg of the product.
-                Enter your choice:""";
+        String menu = " Select the field you want to edit: 0: Go Back 1: Edit name of the product. 2: Edit imageURL of the product. 3: Edit minimum quantity of the product. 4: Edit price per kg of the product. Enter your choice:";
 
         int menuOption = 1;
 
@@ -233,14 +216,7 @@ public class ProductOperations {
 
         System.out.println("You chose to edit the Variant Based Product.");
 
-        String menu = """
-
-                Select the field you want to edit:
-                0: Go Back
-                1: Edit name of the product.
-                2: Edit imageURL of the product.
-                3: Edit variant of the product.
-                Enter your choice:""";
+        String menu = " Select the field you want to edit: 0: Go Back 1: Edit name of the product. 2: Edit imageURL of the product. 3: Edit variant of the product. Enter your choice:";
 
         int menuOption = 1;
 
@@ -312,10 +288,7 @@ public class ProductOperations {
         while (menuOption != 0) {
 
             //displaying menu to select product to add in the cart
-            System.out.print("""
-
-                    Choose the product number you want to delete:
-                    0: Go Back""");
+            System.out.print(" Choose the product number you want to delete: 0: Go Back");
 
 
             //array of objects for the name of the available products

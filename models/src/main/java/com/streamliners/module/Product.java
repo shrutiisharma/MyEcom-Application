@@ -9,7 +9,7 @@ public class Product {
     public int type;
 
     //WBP
-    float minQuantity, pricePerKg;
+    public float minQuantity, pricePerKg;
 
     //VBP
     public List<Variant> variants;
@@ -40,4 +40,5 @@ public class Product {
             return name + "     " + variants;
 
     }
+
 }
