@@ -31,11 +31,11 @@ public class WBProductBinder {
         //binding image,name,subtitle of product
         b.image.setImageURI(Uri.parse(product.imageURL));
         b.productName.setText(product.name);
-        b.productSubtitle.setText("₹" + product.pricePerKg + " / Kg");
+        b.productSubtitle.setText("₹" + String.valueOf(product.pricePerKg).replaceFirst("\\.0+$", "")+ " / Kg");
 
         //Checking if cart contains the product name
         if (cart.cartItems.containsKey(product.name)) {
-            b.addBtn.setVisibility(View.INVISIBLE);
+            b.zeroQtyGroup.setVisibility(View.INVISIBLE);
             b.nonZeroQtyGroup.setVisibility(View.VISIBLE);
             b.qty.setText("" + cart.cartItems.get(product.name).qty);
         }
@@ -54,7 +54,7 @@ public class WBProductBinder {
                                 if (qty != 0) {
                                     b.zeroQtyGroup.setVisibility(View.INVISIBLE);
                                     b.nonZeroQtyGroup.setVisibility(View.VISIBLE);
-                                    b.qty.setText("" + qty);
+                                    b.qty.setText(String.valueOf(qty).replaceFirst("\\.0+$", ""));
                                 } else {
                                     b.zeroQtyGroup.setVisibility(View.VISIBLE);
                                     b.nonZeroQtyGroup.setVisibility(View.INVISIBLE);
@@ -86,7 +86,7 @@ public class WBProductBinder {
                                 if (qty != 0) {
                                     b.zeroQtyGroup.setVisibility(View.INVISIBLE);
                                     b.nonZeroQtyGroup.setVisibility(View.VISIBLE);
-                                    b.qty.setText("" + qty);
+                                    b.qty.setText(String.valueOf(qty).replaceFirst("\\.0+$", ""));
                                 } else {
                                     b.zeroQtyGroup.setVisibility(View.VISIBLE);
                                     b.nonZeroQtyGroup.setVisibility(View.INVISIBLE);

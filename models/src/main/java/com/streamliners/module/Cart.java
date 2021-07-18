@@ -1,8 +1,9 @@
 package com.streamliners.module;
 
+import java.io.Serializable;
 import java.util.HashMap;
 
-public class Cart {
+public class Cart implements Serializable {
 
     public HashMap<String, CartItem> cartItems = new HashMap<>();
      public int total, noOfItems;

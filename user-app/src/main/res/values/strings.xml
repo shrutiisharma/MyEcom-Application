@@ -15,4 +15,7 @@
     <string name="kiwi">Kiwi</string>
     <string name="_2_variants">2 variants</string>
     <string name="variant_name">₹ 96 : 500 g</string>
+    <string name="search">Search</string>
+    <string name="your_api_key">AIzaSyCGffS7DUlmxmWDrw9ZYTnxoj4BrXfJHbY</string>
+    <string name="title_activity_location_picker">Map</string>
 </resources>

@@ -1,6 +1,8 @@
 package com.streamliners.module;
 
-public class CartItem {
+import java.io.Serializable;
+
+public class CartItem implements Serializable {
 
      public String name;
      public float unitPrice, qty;

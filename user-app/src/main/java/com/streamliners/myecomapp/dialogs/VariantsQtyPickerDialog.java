@@ -41,7 +41,7 @@ public class VariantsQtyPickerDialog {
                 b.nonZeroQtyGrp.setVisibility(View.VISIBLE);
                 b.currentQty.setText(String.valueOf(cart.cartItems.get(product.name + " " + variant.name).qty).replaceFirst("\\.0+$", ""));
             }
-            b.chipVariant.setText("₹" + variant.price + " - " + variant.name);
+            b.chipVariant.setText("₹" +String.valueOf(variant.price).replaceFirst("\\.0+$", "") + " - " + variant.name);
 
             //Handling increment btn
             b.btnInc.setOnClickListener(new View.OnClickListener() {

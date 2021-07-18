@@ -57,12 +57,22 @@ public class VBProductBinder {
 
         b.variantChips.setClickable(false);
 
+
+        int qty =0;
+
         //Adding chips
         for (Variant variant : product.variants) {
             ChipVariantBinding binding = ChipVariantBinding.inflate(LayoutInflater.from(context));
-            binding.getRoot().setText("₹" + variant.price + " - " + variant.name);
+            binding.getRoot().setText("₹" +String.valueOf(variant.price).replaceFirst("\\.0+$", "") + " - " + variant.name);
             b.variantChips.addView(binding.getRoot());
 
+            if(cart.cartItems.containsKey(product.name + " " + variant.name)){
+                qty+=cart.cartItems.get(product.name + " " + variant.name).qty;
+            }
+        }
+        if(qty!=0) {
+            b.nonZeroQtyGroup.setVisibility(View.VISIBLE);
+            b.qty.setText(""+qty);
         }
 
         //Setup increment btn
@@ -94,7 +104,7 @@ public class VBProductBinder {
                                 else {
                                     b.nonZeroQtyGroup.setVisibility(View.INVISIBLE);
                                 }
-                                b.qty.setText(String.valueOf(qty));
+                                b.qty.setText(String.valueOf(qty).replaceFirst("\\.0+$", ""));
                                 listener.onCartUpdated(0);
                             }
                         });
@@ -135,7 +145,7 @@ public class VBProductBinder {
                                 else {
                                     b.nonZeroQtyGroup.setVisibility(View.INVISIBLE);
                                 }
-                                b.qty.setText(String.valueOf(qty));
+                                b.qty.setText(String.valueOf(qty).replaceFirst("\\.0+$", ""));
                                 listener.onCartUpdated(0);
                             }
                         });

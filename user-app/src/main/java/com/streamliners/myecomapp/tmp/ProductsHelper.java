@@ -31,10 +31,10 @@ public class ProductsHelper {
         Product strawberry = new Product("Strawberry",Uri.parse("android.resource://com.streamliners.myecomapp/" + R.drawable.strawberry).toString(),new ArrayList<>
                 (Arrays.asList(new Variant("1Kg",50))
                 ));
-        Product cherry = new Product("Cherry",Uri.parse("android.resource://com.streamliners.myecomapp/" + R.drawable.cheery).toString(),new ArrayList<>
-                (Arrays.asList(new Variant("1Kg",60), new Variant("2Kg",120))
-                ));
 
+        Product cherry = new Product("Cherry",Uri.parse("android.resource://com.streamliners.myecomapp/" + R.drawable.cheery).toString(),new ArrayList<>
+                (Arrays.asList(new Variant("1Kg",50))
+                ));
 
         products.add(apple);
         products.add(orange);
@@ -45,6 +45,7 @@ public class ProductsHelper {
         products.add(sugar);
         products.add(strawberry);
         products.add(cherry);
+
 
 
         return products;
