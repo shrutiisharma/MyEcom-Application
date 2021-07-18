@@ -18,4 +18,4 @@ Here are the screenshots of the application:
 
 Watch application video from [here](https://drive.google.com/file/d/1NvKuMtA3W956YXHys2OjwoIOqGm2zMR8/view?usp=sharing)
 
-Download apk from [here](https://github.com/priyal-gopawat/MyEcom-Application/releases/download/1.0/user-app-debug.apk)
+Download apk from [here](https://github.com/priyal-gopawat/MyEcom-Application/releases/download/1.1/user-app-debug.apk)
