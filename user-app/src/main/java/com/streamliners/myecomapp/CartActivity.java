@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.streamliners.module.Cart;
 import com.streamliners.module.CartItem;
 import com.streamliners.module.ProductType;
@@ -89,6 +91,13 @@ public class CartActivity extends AppCompatActivity {
         b.costSummary.setText(cart.noOfItems+" items");
         b.cost.setText("₹ "+cart.total);
         binding.cartList.addView(b.getRoot());
+
+        binding.btnPlaceOrder.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, "Order Placed Successfully!", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 }
