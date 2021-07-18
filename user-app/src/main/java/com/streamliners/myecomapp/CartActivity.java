@@ -95,7 +95,15 @@ public class CartActivity extends AppCompatActivity {
         binding.btnPlaceOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(binding.nameEt.getText().toString().isEmpty()){
+                    Toast.makeText(context, "Please Enter a Name", Toast.LENGTH_SHORT).show();
+                    return;
+                }else if(binding.contactNoEt.getText().toString().isEmpty()){
+                    Toast.makeText(context, "Please Enter a Contact No.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
                 Toast.makeText(context, "Order Placed Successfully!", Toast.LENGTH_SHORT).show();
+                return;
             }
         });
     }
