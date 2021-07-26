@@ -17,6 +17,9 @@ import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.gson.Gson;
 import com.streamliners.module.Cart;
 import com.streamliners.module.Product;
@@ -44,11 +47,13 @@ public class MainActivity extends AppCompatActivity {
         b = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(b.getRoot());
 
+
         context = this;
 
         cart = new Cart();
 
         setTitle("Products");
+
 
 
         products = ProductsHelper.getProducts();
